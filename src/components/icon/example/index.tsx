@@ -3,7 +3,7 @@ import { Icon } from '@/components/index'
 import Taro from '@tarojs/taro'
 import './index.scss'
 
-function ExampleIcon() {
+function Example() {
   const icons = [
     'add-circle',
     'add-rectangle',
@@ -255,11 +255,11 @@ function ExampleIcon() {
     })
   }
   return (
-    <View className='example-icon'>
-      <View className='example-icon__list'>
-        {icons.map(icon => (<View className='example-icon__item' key={icon} onClick={() => copy(icon)}>
-          <Icon name={icon} size='48rpx' className='test' onClick={() => console.log(22)} />
-          <View className='example-icon__name'>
+    <View className='example'>
+      <View className='example__list'>
+        {icons.map(icon => (<View className='example__item' key={icon} onClick={() => copy(icon)}>
+          <Icon name={icon} size='48rpx' />
+          <View className='example__name'>
             {icon}
           </View>
         </View>))}
@@ -268,4 +268,4 @@ function ExampleIcon() {
   );
 }
 
-export default ExampleIcon;
+export default Example;
