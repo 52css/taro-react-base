@@ -67,3 +67,13 @@ module.exports = {
   }
 }
 ```
+
+## 增加output
+
+使用taro最大的好处就是可以发布多端，目前生成都是dist，修改dist生成对应小程序，方便同时调试, 在 `config/index.js` 的dist修改成
+
+```js
+module.exports = {
+  outputRoot: `dist/${process.env.TARO_ENV}`,
+}
+```

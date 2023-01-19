@@ -1,3 +1,5 @@
+import * as path from 'path'; //引入node的path模块
+
 const config = {
   projectName: 'taro-react-base',
   date: '2023-1-19',
@@ -8,7 +10,7 @@ const config = {
     828: 1.81 / 2
   },
   sourceRoot: 'src',
-  outputRoot: 'dist',
+  outputRoot: `dist/${process.env.TARO_ENV}`,
   plugins: [],
   defineConstants: {
   },
@@ -71,6 +73,12 @@ const config = {
         enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
       }
     }
+  },
+  alias: {
+    '@/components': path.resolve(__dirname, '..', 'src/components'),
+    '@/utils': path.resolve(__dirname, '..', 'src/utils'),
+    '@/services': path.resolve(__dirname, '..', 'src/services'),
+    '@/hooks': path.resolve(__dirname, '..', 'src/hooks'),
   }
 }
 
