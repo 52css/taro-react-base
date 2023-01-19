@@ -11,4 +11,8 @@ function Category() {
   );
 }
 
+definePageConfig({
+  navigationBarTitleText: '分类'
+})
+
 export default Category;

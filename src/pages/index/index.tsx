@@ -24,4 +24,8 @@ function Index() {
   );
 }
 
+definePageConfig({
+  navigationBarTitleText: '首页'
+})
+
 export default Index;

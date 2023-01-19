@@ -12,4 +12,8 @@ function Cart() {
   );
 }
 
+definePageConfig({
+  navigationBarTitleText: '购物车'
+})
+
 export default Cart;

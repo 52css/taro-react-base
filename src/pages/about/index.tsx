@@ -12,4 +12,8 @@ function About() {
   );
 }
 
+definePageConfig({
+  navigationBarTitleText: '关于'
+})
+
 export default About;

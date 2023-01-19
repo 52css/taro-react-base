@@ -11,4 +11,8 @@ function My() {
   );
 }
 
+definePageConfig({
+  navigationBarTitleText: '我的'
+})
+
 export default My;
