@@ -77,3 +77,50 @@ module.exports = {
   outputRoot: `dist/${process.env.TARO_ENV}`,
 }
 ```
+
+## 增加跨平台开发
+
+可以通过`process.env.TARO_ENV` 取值：`weapp` / `swan` / `alipay` / `tt` / `qq` / `jd` / `h5` / `rn`
+
+可以通过这个变量来区分不同环境，从而使用不同的逻辑。在编译阶段，**会移除不属于当前编译类型的代码，只保留当前编译类型下的代码**，例如：
+
+1. 在微信小程序和 H5 端分别引用不同资源：
+
+```js
+/** 源码 */
+if (process.env.TARO_ENV === 'weapp') {
+  require('path/to/weapp/name')
+} else if (process.env.TARO_ENV === 'h5') {
+  require('path/to/h5/name')
+}
+
+/** 编译后（微信小程序）*/
+if (true) {
+  require('path/to/weapp/name')
+}
+/** 编译后（H5）*/
+if (true) {
+  require('path/to/h5/name')
+}
+```
+
+2. 决定不同端要加载的组件
+
+```js
+/** 源码（React JSX） */
+<View>
+  {process.env.TARO_ENV === 'weapp' && <ScrollViewWeapp />}
+  {process.env.TARO_ENV === 'h5' && <ScrollViewH5 />}
+</View>
+
+/** 编译后（微信小程序）*/
+<View>
+  {true && <ScrollViewWeapp />}
+</View>
+/** 编译后（H5）*/
+<View>
+  {true && <ScrollViewH5 />}
+</View>
+```
+
+> 不要解构 process.env 来获取环境变量，请直接以完整书写的方式（process.env.TARO_ENV）来进行使用。
