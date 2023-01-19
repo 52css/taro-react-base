@@ -165,3 +165,38 @@ Taro.navigateTo({
   url: `pages/about/index?id=1`
 })
 ```
+
+## 增加公共组件
+
+在 `src/components` 下新建 `hello/index.tsx`
+
+```jsx
+import { View, Text } from '@tarojs/components'
+
+function Hello({name}) {
+  return (
+    <View>
+      Hello, {name}
+    </View>
+  );
+}
+
+export default Hello;
+```
+
+为了方便引用, 新建 `src/components/index.ts`
+
+```ts
+export { default as Hello } from './hello'
+```
+
+正式引用组件, 导入组件
+
+```js
+import { Hello } from '@/components/index'
+```
+
+```jsx
+<Hello name='world' />
+```
+

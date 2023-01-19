@@ -1,6 +1,8 @@
 import { View, Text } from '@tarojs/components'
 import Taro, { useRouter } from '@tarojs/taro'
 
+import { Hello } from '@/components/index'
+
 import './index.scss'
 
 function Index() {
@@ -10,9 +12,12 @@ function Index() {
     })
   }
   return (
-    <View onClick={goAbout}>
-      Index
-    </View>
+    <>
+      <View onClick={goAbout}>
+        Index
+      </View>
+      <Hello name='world' />
+    </>
   );
 }
 
