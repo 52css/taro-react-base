@@ -9,7 +9,7 @@
 - [x] 增加组件
 - [] 增加readme
 
-2. 自定义tabbar
+2. [自定义tabbar](./docs/%E8%87%AA%E5%AE%9A%E4%B9%89tabbar.md)
 - [x] 新建4个页面+路由
 - [x] 新建custom-tab-bar + images
 - [x] 新建hooks
