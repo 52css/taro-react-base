@@ -14,8 +14,8 @@
 - [x] 新建custom-tab-bar + images
 - [x] 新建hooks
 
-2. 基础组件-icon开发
-- [] 增加字体，如何生成图标字体
-- [] 增加字体组件
-  - [] 增加name属性
-  - [] 增加size属性
+3. [基础组件-icon](./docs/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6-icon.md)
+- [x] 增加字体，如何生成图标字体
+- [x] 增加字体组件
+  - [x] 增加name属性
+  - [x] 增加size属性

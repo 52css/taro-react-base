@@ -5,6 +5,8 @@ export default defineAppConfig({
     'pages/goods/category/index',
     'pages/cart/index',
     'pages/usercenter/my/index',
+    'pages/example/index',
+    'pages/example/icon/index',
   ],
   window: {
     backgroundTextStyle: 'light',
