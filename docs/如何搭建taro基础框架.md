@@ -34,3 +34,36 @@ $ 选择yarn
 $ 选择gitee
 $ 选择默认模板
 ```
+
+## 增加alias
+
+在 `config/index.js` 增加配置, 头部引用
+```js
+import * as path from 'path'; //引入node的path模块
+```
+```js
+module.exports = {
+  // ...
+  alias: {
+    '@/components': path.resolve(__dirname, '..', 'src/components'),
+    '@/utils': path.resolve(__dirname, '..', 'src/utils'),
+    '@/services': path.resolve(__dirname, '..', 'src/services'),
+    '@/hooks': path.resolve(__dirname, '..', 'src/hooks'),
+  }
+}
+```
+为了让编辑器（VS Code）不报错，并继续使用自动路径补全的功能，需要在项目根目录下的 `jsconfig.json` 或者 `tsconfig.json` 中配置 `paths` 让编辑器认得我们的别名，形式如下：
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["./src/components/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/services/*": ["./src/services/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+    }
+  }
+}
+```

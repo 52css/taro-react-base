@@ -2,7 +2,7 @@
 
 1. [如何搭建taro基础框架](./docs/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAtaro%E5%9F%BA%E7%A1%80%E6%A1%86%E6%9E%B6.md)
 - [x] 官方cli构建（代码规范、构建等）
-- [] 增加alias
+- [x] 增加alias
 - [] 增加output
 - [] 自定义tabbar
 - [] 增加路由
