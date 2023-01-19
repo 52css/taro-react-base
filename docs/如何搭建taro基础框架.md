@@ -124,3 +124,44 @@ if (true) {
 ```
 
 > 不要解构 process.env 来获取环境变量，请直接以完整书写的方式（process.env.TARO_ENV）来进行使用。
+
+
+## 增加路由
+
+在`app.config.ts` 下 pages 新增 `pages/about/index`
+
+```js
+export default defineAppConfig({
+  pages: [
+    'pages/index/index',
+    'pages/about/index'
+  ],
+})
+```
+
+以新建 about 为例， 新建 `pages/about/index.tsx`
+
+```jsx
+import { View, Text } from '@tarojs/components'
+import { useRouter } from '@tarojs/taro'
+
+function About() {
+  const router = useRouter()
+
+  console.log('router', router)
+  return (
+    <View>
+      About
+    </View>
+  );
+}
+
+export default About;
+```
+
+### 路由跳转
+```js
+Taro.navigateTo({
+  url: `pages/about/index?id=1`
+})
+```
