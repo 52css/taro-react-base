@@ -6,7 +6,14 @@ export default defineAppConfig({
     'pages/cart/index',
     'pages/usercenter/my/index',
     'pages/example/index',
-    'components/icon/example/index',
+  ],
+  subPackages: [
+    {
+      root: 'components/',
+      pages: [
+        'icon/example/index',
+      ]
+    }
   ],
   window: {
     backgroundTextStyle: 'light',

@@ -268,4 +268,8 @@ function Example() {
   );
 }
 
+definePageConfig({
+  navigationBarTitleText: 'Icon 图标'
+})
+
 export default Example;
