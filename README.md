@@ -5,10 +5,14 @@
 - [x] 增加alias
 - [x] 增加output
 - [x] 增加跨平台开发
-- [] 自定义tabbar
 - [x] 增加路由
 - [x] 增加组件
 - [] 增加readme
+
+2. 自定义tabbar
+- [x] 新建4个页面+路由
+- [x] 新建custom-tab-bar + images
+- [x] 新建hooks
 
 2. 基础组件-icon开发
 - [] 增加字体，如何生成图标字体

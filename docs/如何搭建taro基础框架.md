@@ -125,6 +125,10 @@ if (true) {
 
 > 不要解构 process.env 来获取环境变量，请直接以完整书写的方式（process.env.TARO_ENV）来进行使用。
 
+## 自定义tabbar
+
+实际项目还需要对底部tabbar修改, 可以直接参考代码中 `src/custom-tab-bar`
+
 
 ## 增加路由
 

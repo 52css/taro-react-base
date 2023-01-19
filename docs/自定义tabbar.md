@@ -1,17 +1,14 @@
+# 自定义tabbar
+
+## 增加页面和路由，直接看代码
+
+## 增加custom-tab-bar，直接看代码
+
+## 对app.config.ts 增加 tabbar配置
+
+```js
 export default defineAppConfig({
-  pages: [
-    'pages/index/index',
-    'pages/about/index',
-    'pages/goods/category/index',
-    'pages/cart/index',
-    'pages/usercenter/my/index',
-  ],
-  window: {
-    backgroundTextStyle: 'light',
-    navigationBarBackgroundColor: '#fff',
-    navigationBarTitleText: 'WeChat',
-    navigationBarTextStyle: 'black'
-  },
+  ...,
   tabBar: {
     custom: true,
     color: '#000000',
@@ -45,3 +42,41 @@ export default defineAppConfig({
     ]
   }
 })
+```
+
+## 增加hooks `hooks/use-tabbar.ts`
+
+```js
+import { useMemo } from 'react'
+import Taro, { useDidShow } from '@tarojs/taro'
+import type CustomTabBar from '../custom-tab-bar'
+
+export default (index = 0) => {
+  const page = useMemo(() => Taro.getCurrentInstance().page, [])
+
+  useDidShow(() => {
+    const tabbar = Taro.getTabBar<CustomTabBar>(page)
+    tabbar?.setSelected(index)
+  })
+}
+```
+
+引用, 以分类为例，第二个
+
+```js
+import { View, Text } from '@tarojs/components'
+import { useTabbar } from '@/hooks/index'
+
+function Category() {
+  useTabbar(1)
+
+  return (
+    <View>
+      Category
+    </View>
+  );
+}
+
+export default Category;
+
+```
