@@ -5,7 +5,7 @@ function Example() {
   return (
     <View className='example'>
       <View className='example__block'>
-        <Button size='large' shape='rectangle' theme='primary' block>
+        <Button size='large' shape='rectangle' theme='primary' block className='test'>
           强按钮
         </Button>
         <Button size='large' theme='primary' shape='rectangle' variant='outline' block>
@@ -33,6 +33,29 @@ function Example() {
         <Button size='large' shape='rectangle' theme='primary' variant='text' block>
           文字按钮
         </Button>
+      </View>
+      <View className='flex align-center margin-right'>
+        <Button size='large' icon={<Icon name='app' />} shape='rectangle' theme='primary'>
+          图标按钮
+        </Button>
+        <Button size='large' icon={<Icon name='app' />} shape='round' theme='primary'>
+          图标按钮
+        </Button>
+      </View>
+      <View className='flex align-center margin-right'>
+        <Button size='large' icon={<Icon name='app' />} shape='square' theme='primary'></Button>
+        <Button size='large' icon={<Icon name='app' />} shape='circle' theme='primary'></Button>
+      </View>
+      <View className='button-demo flex'>
+        <Button size='large' shape='square' theme='primary' loading></Button>
+        <Button size='large' shape='rectangle' theme='primary' loading>
+          加载中...
+        </Button>
+      </View>
+      <View className='flex align-center margin-right'>
+        <Button size='large' shape='rectangle' theme='primary'>按钮 44</Button>
+        <Button shape='rectangle' theme='primary'>按钮 40</Button>
+        <Button size='small' shape='rectangle' theme='primary'>按钮 36</Button>
       </View>
     </View>
   );

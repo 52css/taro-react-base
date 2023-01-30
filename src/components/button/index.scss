@@ -14,15 +14,43 @@
   }
 
 
-  &--rectangle {}
-  &--square {}
-  &--round {}
-  &--circle {}
+  &--rectangle {
+    border-radius: 8rpx;
+  }
+  &--square {
+    border-radius: 8rpx;
+    padding: 0;
+    width: 80rpx;
+    &.button--large {
+      width: 88rpx;
+    }
+  }
+  &--round {
+    border-radius: 40rpx;
+    &.button--large {
+      border-radius: 44rpx;
+    }
+  }
+  &--circle {
+    border-radius: 50%;
+    padding: 0;
+    width: 80rpx;
+    &.button--large {
+      width: 88rpx;
+    }
+  }
 
-  &--small {}
+  &--small {
+    font-size: 28rpx;
+    height: 72rpx;
+    line-height: 72rpx;
+    padding-left: 32rpx;
+    padding-right: 32rpx;
+  }
   &--medium {
     font-size: 28rpx;
     height: 80rpx;
+    line-height: 80rpx;
     padding-left: 32rpx;
     padding-right: 32rpx;
   }

@@ -6,13 +6,16 @@ import './index.scss';
 export interface IProps {
   name: string;
   size?: string | number;
+  rotation?: boolean;
   className?: string;
   onClick?: () => void;
 }
 
-function Icon({name = 'app', size = '32rpx', className, onClick}: IProps) {
+function Icon({name = 'app', size = '32rpx', rotation = false, className, onClick}: IProps) {
   return (
-    <Text className={classNames(['icon', `icon-${name}`, className])} style={{fontSize: addUnit(size)}} onClick={onClick} />
+    <Text className={classNames(['icon', `icon-${name}`, className, {
+      'icon--rotation': rotation
+    }])} style={{fontSize: addUnit(size)}} onClick={onClick} />
   );
 }
 

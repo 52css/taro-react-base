@@ -1,5 +1,6 @@
 import { Button, View, Text } from '@tarojs/components';
 import classNames from 'classnames'
+import { Icon } from '@/components/index'
 import './index.scss';
 
 export type ButtonShape = `rectangle` | `square` | `round` | `circle`
@@ -9,7 +10,6 @@ export type ButtonType = `submit` | `reset` | `button`
 export type ButtonVariant = `base` | `outline` | `text`
 
 export interface IProps {
-  className?: string;
   style?: object;
   block?: boolean;
   children?: string;
@@ -27,7 +27,6 @@ export interface IProps {
 }
 
 export default function ({
-  className,
   style = {},
   block = false,
   children,
@@ -50,7 +49,7 @@ export default function ({
       `button--${size}`,
       `button--${theme}`,
       `button--${variant}`,
-      classNames, {
+      {
         'button--block': block,
         'button--disabled': disabled,
         'button--ghost': ghost,
@@ -58,7 +57,11 @@ export default function ({
       }
     ])}
     >
-      {icon}{children}
+      {loading && (<Icon name='loading' rotation />) }
+      {icon}
+      <Text className='button__txt'>
+        {children}
+      </Text>
     </Button>
   );
 }

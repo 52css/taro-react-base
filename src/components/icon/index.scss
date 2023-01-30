@@ -11,6 +11,18 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  &--rotation {
+    -webkit-animation: rota 1s infinite linear;
+  }
+}
+
+@-webkit-keyframes rota {
+  0% {
+    -webkit-transform: rotate(0deg)
+  }
+  to {
+    -webkit-transform: rotate(360deg)
+  }
 }
 
 .icon-user-clear:before {
