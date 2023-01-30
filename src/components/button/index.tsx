@@ -58,7 +58,7 @@ export default function ({
       }
     ])}
     >
-      Button
+      {icon}{children}
     </Button>
   );
 }

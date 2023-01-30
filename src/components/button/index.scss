@@ -1,3 +1,72 @@
 .button {
-  
+  display: inline-block;
+  &--block {
+    display: block;
+    width: 100%;
+  }
+
+  &--ghost {
+    &.button--outline {
+      background-color: transparent;
+      border: 1px solid #fff;
+      color: #fff;
+    }
+  }
+
+
+  &--rectangle {}
+  &--square {}
+  &--round {}
+  &--circle {}
+
+  &--small {}
+  &--medium {
+    font-size: 28rpx;
+    height: 80rpx;
+    padding-left: 32rpx;
+    padding-right: 32rpx;
+  }
+  &--large {
+    font-size: 32rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    padding-left: 32rpx;
+    padding-right: 32rpx;
+  }
+
+  &--default {
+  }
+  &--primary {
+    &.button--base {
+      background-color: var(--primary-color);
+      color: #ffffff;
+    }
+    &.button--outline {
+      border: 1rpx solid var(--primary-color);
+      color: var(--primary-color);
+    }
+    &.button--text {
+      color: var(--primary-color);
+    }
+  }
+  &--danger {
+    &.button--base {
+      background-color: var(--danger-color);
+      color: #ffffff;
+    }
+    &.button--outline {
+      border: 1rpx solid var(--danger-color);
+      color: var(--danger-color);
+    }
+    &.button--text {
+      color: var(--danger-color);
+    }
+  }
+
+  &--base {}
+  &--outline {
+    background-color: transparent;
+    border: 1px solid #dcdcdc;
+  }
+  &--text {}
 }

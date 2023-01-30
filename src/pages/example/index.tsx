@@ -6,6 +6,9 @@ function Example() {
       <Navigator url='/components/icon/example/index'>
         Icon 图标
       </Navigator>
+      <Navigator url='/components/button/example/index'>
+        Button 按钮
+      </Navigator>
     </View>
   );
 }

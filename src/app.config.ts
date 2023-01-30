@@ -12,6 +12,7 @@ export default defineAppConfig({
       root: 'components/',
       pages: [
         'icon/example/index',
+        'button/example/index',
       ]
     }
   ],
