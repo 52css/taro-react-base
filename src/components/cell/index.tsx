@@ -1,20 +1,24 @@
 import { View, Text } from '@tarojs/components'
+import { CellProps } from './type';
 
-export type CellAlign = `top` | `middle` | `bottom`
-
-export interface IProps {
-  align: CellAlign;
-  arrow: boolean;
-  bordered: boolean;
-  description: string;
-  hover: boolean;
-  image: string;
-}
-
-export default function ({ name }: IProps) {
+export default function ({
+  align = 'middle',
+  arrow = false,
+  bordered = true,
+  description,
+  hover = false,
+  image,
+  leftIcon,
+  note,
+  required = false,
+  rightIcon,
+  title,
+  url,
+  onClick
+}: CellProps) {
   return (
-    <View>
-      Hello, {name}
+    <View className='cell'>
+      Hello
     </View>
   );
 }
