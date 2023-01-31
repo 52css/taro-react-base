@@ -1,4 +1,4 @@
-export interface IconProps {
+export interface IIconProps {
   name: string;
   size?: string | number;
   rotation?: boolean;

@@ -1,9 +1,9 @@
 import { MouseEvent } from 'react';
 import { TNode, TElement, SizeEnum } from '../common';
-import { ButtonProps } from '@/components/button/type'
+import { IButtonProps } from '@/components/button/type'
 
-export interface FabProps {
-  buttonProps?: ButtonProps;
+export interface IFabProps {
+  buttonProps?: IButtonProps;
   icon?: TElement;
   text?: string;
   onClick?: (e: MouseEvent<HTMLElement>) => void;

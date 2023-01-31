@@ -8,7 +8,7 @@ export type ButtonType = `submit` | `reset` | `button`
 export type ButtonVariant = `base` | `outline` | `text`
 
 
-export interface ButtonProps {
+export interface IButtonProps {
   style?: object;
   block?: boolean;
   children?: TNode;

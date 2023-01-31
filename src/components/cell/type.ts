@@ -1,6 +1,6 @@
 import { TNode, TElement, VerticalAlignEnum } from '../common';
 
-export interface CellProps {
+export interface ICellProps {
   align?: VerticalAlignEnum;
   arrow?: boolean;
   bordered?: boolean;

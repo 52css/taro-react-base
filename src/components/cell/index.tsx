@@ -1,5 +1,5 @@
 import { View, Text } from '@tarojs/components'
-import { CellProps } from './type';
+import { ICellProps } from './type';
 
 export default function ({
   align = 'middle',
@@ -15,7 +15,7 @@ export default function ({
   title,
   url,
   onClick
-}: CellProps) {
+}: ICellProps) {
   return (
     <View className='cell'>
       Hello

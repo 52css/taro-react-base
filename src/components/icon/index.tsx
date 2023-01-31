@@ -1,10 +1,10 @@
 import { View, Text } from '@tarojs/components';
 import classNames from 'classnames'
 import { addUnit } from '@/utils/index'
-import { IconProps } from './type'
+import { IIconProps } from './type'
 import './index.scss';
 
-function Icon({name = 'app', size = '32rpx', rotation = false, onClick}: IconProps) {
+function Icon({name = 'app', size = '32rpx', rotation = false, onClick}: IIconProps) {
   return (
     <Text className={classNames(['icon', `icon-${name}`, {
       'icon--rotation': rotation

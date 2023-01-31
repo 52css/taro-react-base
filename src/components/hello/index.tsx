@@ -1,12 +1,10 @@
 import { View, Text } from '@tarojs/components'
-import { HelloProps } from './type'
+import { IHelloProps } from './type'
 
-function Hello({name}: HelloProps) {
+export default function ({name}: IHelloProps) {
   return (
     <View>
       Hello, {name}
     </View>
   );
 }
-
-export default Hello;

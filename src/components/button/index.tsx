@@ -1,7 +1,7 @@
 import { Button, View, Text } from '@tarojs/components';
 import classNames from 'classnames'
 import { Icon } from '@/components/index'
-import { ButtonProps } from './type';
+import { IButtonProps } from './type';
 import './index.scss';
 
 export default function ({
@@ -18,7 +18,7 @@ export default function ({
   type = 'button',
   variant = 'base',
   onClick
-}: ButtonProps) {
+}: IButtonProps) {
   const handleClick = (e) => {
     onClick && onClick(e)
   }
