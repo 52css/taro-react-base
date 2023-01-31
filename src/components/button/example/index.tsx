@@ -57,6 +57,12 @@ function Example() {
         <Button shape='rectangle' theme='primary'>按钮 40</Button>
         <Button size='small' shape='rectangle' theme='primary'>按钮 36</Button>
       </View>
+
+      <View className='flex align-center margin-right'>
+        <Button size='large' shape='rectangle' theme='primary' disabled>按钮 44</Button>
+        <Button shape='rectangle' theme='primary' disabled>按钮 40</Button>
+        <Button size='small' shape='rectangle' theme='primary' disabled>按钮 36</Button>
+      </View>
     </View>
   );
 }

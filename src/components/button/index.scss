@@ -13,6 +13,11 @@
     }
   }
 
+  &--disabled {
+    cursor: not-allowed;
+    opacity: .68;
+  }
+
 
   &--rectangle {
     border-radius: 8rpx;
