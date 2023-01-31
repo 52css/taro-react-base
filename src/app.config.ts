@@ -13,6 +13,7 @@ export default defineAppConfig({
       pages: [
         'icon/example/index',
         'button/example/index',
+        'fab/example/index',
       ]
     }
   ],
