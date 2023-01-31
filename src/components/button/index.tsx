@@ -23,20 +23,22 @@ export default function ({
     onClick && onClick(e)
   }
   return (
-    <Button formType={type} className={classNames([
-      'button',
-      `button--${shape}`,
-      `button--${size}`,
-      `button--${theme}`,
-      `button--${variant}`,
-      {
-        'button--block': block,
-        'button--disabled': disabled,
-        'button--ghost': ghost,
-        'button--loading': loading,
-      }
-    ])}
-    onClick={handleClick}
+    <Button
+      formType={type}
+      className={classNames([
+        'button',
+        `button--${shape}`,
+        `button--${size}`,
+        `button--${theme}`,
+        `button--${variant}`,
+        {
+          'button--block': block,
+          'button--disabled': disabled,
+          'button--ghost': ghost,
+          'button--loading': loading,
+        }
+      ])}
+      onClick={handleClick}
     >
       {loading && (<Icon name='loading' rotation />) }
       {icon}
