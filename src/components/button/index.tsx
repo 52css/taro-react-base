@@ -23,7 +23,7 @@ export interface IProps {
   theme?: ButtonTheme;
   type?: ButtonType;
   variant?: ButtonVariant;
-  onClick?: () => void;
+  onClick?: (e) => void;
 }
 
 export default function ({
@@ -42,6 +42,9 @@ export default function ({
   variant = 'base',
   onClick
 }: IProps) {
+  const handleClick = (e) => {
+    onClick && onClick(e)
+  }
   return (
     <Button formType={type} className={classNames([
       'button',
@@ -56,6 +59,7 @@ export default function ({
         'button--loading': loading,
       }
     ])}
+    onClick={handleClick}
     >
       {loading && (<Icon name='loading' rotation />) }
       {icon}

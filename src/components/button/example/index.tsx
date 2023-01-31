@@ -2,10 +2,13 @@ import { View, Text } from '@tarojs/components';
 import { Icon, Button } from '@/components/index'
 
 function Example() {
+  const onClick = () => {
+    console.log('123')
+  }
   return (
     <View className='example'>
       <View className='example__block'>
-        <Button size='large' shape='rectangle' theme='primary' block className='test'>
+        <Button size='large' shape='rectangle' theme='primary' block onClick={onClick}>
           强按钮
         </Button>
         <Button size='large' theme='primary' shape='rectangle' variant='outline' block>
