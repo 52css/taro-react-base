@@ -43,3 +43,15 @@
   - [x] 增加text属性，文本内容
   - [x] 增加onClick属性，TS 类型：(context: {e: MouseEvent}) => void悬浮按钮点击事件
 
+6. 数据展示-badge
+- [x] 增加组件
+  - [x] 增加children属性, 徽标内容，同 content。TS 类型：string | TNode。通用类型定义
+  - [x] 增加color属性，颜色
+  - [x] 增加content属性，徽标内容。TS 类型：string | TNode。通用类型定义
+  - [x] 增加count属性，徽标右上角内容。可以是数字，也可以是文字。如：'new'/3/99+。TS 类型：string | number | TNode。通用类型定义
+  - [x] 增加dot属性，是否为红点
+  - [x] 增加maxCount属性，封顶的数字值
+  - [x] 增加offset属性，设置状态点的位置偏移，示例：[-10, 20] 或 ['10em', '8rem']。TS 类型：Array<string | number>
+  - [x] 增加shape属性，形状。可选项：`circle`/round
+  - [x] 增加showZero属性，当数值为 0 时，是否展示徽标
+  - [x] 增加size属性，尺寸。可选项：small/`medium`
