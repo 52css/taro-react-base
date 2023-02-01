@@ -14,6 +14,7 @@ export default defineAppConfig({
         'icon/example/index',
         'button/example/index',
         'fab/example/index',
+        'badge/example/index',
       ]
     }
   ],

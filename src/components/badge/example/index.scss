@@ -1,0 +1,11 @@
+.example {
+  &__demo {
+    display: flex;
+    padding: 16px 0;
+    width: 100%;
+    &__item {
+      text-align: center;
+      width: 24%;
+    }
+  }
+}

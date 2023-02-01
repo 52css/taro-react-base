@@ -19,6 +19,7 @@ export default function ({
   variant = 'base',
   onClick
 }: IButtonProps) {
+  const childNode = content || children;
   const handleClick = (e) => {
     onClick && onClick(e)
   }
@@ -42,8 +43,7 @@ export default function ({
     >
       {loading && (<Icon name='loading' rotation />) }
       {icon}
-      {children}
-      {content}
+      {childNode}
     </Button>
   );
 }
