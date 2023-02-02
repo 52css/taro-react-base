@@ -15,6 +15,7 @@ export default defineAppConfig({
         'button/example/index',
         'fab/example/index',
         'badge/example/index',
+        'cell/example/index',
       ]
     }
   ],

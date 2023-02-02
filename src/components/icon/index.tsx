@@ -4,7 +4,7 @@ import { addUnit } from '@/utils/index'
 import { IIconProps } from './type'
 import './index.scss';
 
-function Icon({name = 'app', size = '32rpx', rotation = false, onClick}: IIconProps) {
+function Icon({name = 'app', size = 'inherit', rotation = false, onClick}: IIconProps) {
   return (
     <Text className={classNames(['icon', `icon-${name}`, {
       'icon--rotation': rotation

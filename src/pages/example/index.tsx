@@ -8,6 +8,7 @@ function Example() {
       <Navigator url='/components/button/example/index'> Button 按钮 </Navigator>
       <Navigator url='/components/fab/example/index'> Fab 悬浮按钮 </Navigator>
       <View>布局</View>
+      <Navigator url='/components/cell/example/index'> Cell 宫格 </Navigator>
       <View>导航</View>
       <View>输入</View>
       <View>数据展示</View>

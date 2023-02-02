@@ -1,3 +1,51 @@
 .cell {
-  
+  align-items: center;
+  background: #fff;
+  display: flex;
+  font-size: 32rpx;
+  line-height: 48rpx;
+  padding: 24rpx 24rpx 24rpx 32rpx;
+  position: relative;
+  &__left-icon {
+    align-self: flex-start;
+    color: #000000e6;
+    flex-shrink: 0;
+    font-size: 48rpx;
+    line-height: 48rpx;
+    margin-right: 16rpx;
+  }
+  &__title {
+    color: #000000e6;
+    flex: 1 1 auto;
+  }
+  &__note {
+    align-items: center;
+    color: #0006;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    overflow: hidden;
+    text-align: right;
+  }
+  &__right-icon {
+    color: #0006;
+    font-size: 48rpx;
+    line-height: 48rpx;
+    margin-left: 16rpx;
+  }
+  &--middle {
+    align-items: center;
+  }
+  &--bordered {
+    &:after {
+      border-bottom: 1rpx solid #e7e7e7;
+      bottom: 0;
+      content: " ";
+      left: 32rpx;
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+    }
+  }
 }

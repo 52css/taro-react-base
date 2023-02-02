@@ -6,6 +6,7 @@
   align-items: center;
   display: inline-flex;
   position: relative;
+
   &__txt {
     background-color: #e34d59;
     color: #ffffffe6;
@@ -18,25 +19,22 @@
     padding: 0 8rpx;
     text-align: center;
     z-index: 100;
-  }
-  &--has-children {
-    .badge__txt {
+
+    &--has-children {
       position: absolute;
       top: 0;
       right: 0;
-      transform: translate(50%,-50%);
+      transform: translate(50%, -50%);
     }
-  }
-  &--dot {
-    .badge__txt {
+
+    &--dot {
       border-radius: 50%;
       height: 20rpx;
       min-width: 20rpx;
       padding: 0;
     }
-  }
-  &--circle {
-    .badge__txt {
+
+    &--circle {
       border-radius: 16rpx;
     }
   }

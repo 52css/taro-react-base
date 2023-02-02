@@ -25,12 +25,12 @@ export default function ({
   let isHidden = !count;
 
   const badgeClassName = classNames(
-    'badge',
-    `badge--${shape}`,
-    `badge--${size}`,
+    'badge__txt',
+    `badge__txt--${shape}`,
+    `badge__txt--${size}`,
     {
-      'badge--has-children': !!childNode,
-      'badge--dot': dot,
+      'badge__txt--has-children': !!childNode,
+      'badge__txt--dot': dot,
     }
   );
 
@@ -55,7 +55,7 @@ export default function ({
   console.log('!isHidden', !isHidden)
 
   const badge = !isHidden ? (
-      <Text className='badge__txt' style={getStyle()}>
+      <Text className={badgeClassName} style={getStyle()}>
         {dot ? null : getDisplayCount()}
       </Text>
     ) : null;
@@ -63,7 +63,7 @@ export default function ({
   if (!childNode) return badge;
 
   return (
-    <View className={badgeClassName}>
+    <View className='badge'>
       {childNode}
       {badge}
     </View>
