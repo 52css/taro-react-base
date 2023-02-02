@@ -4,11 +4,32 @@ import { addUnit } from '@/utils/index'
 import { IIconProps } from './type'
 import './index.scss';
 
-function Icon({name = 'app', size = 'inherit', rotation = false, onClick}: IIconProps) {
+function Icon({
+  name = 'app',
+  size = 'inherit',
+  rotation = false,
+  className,
+  style,
+  onClick
+}: IIconProps) {
+  const rootClassName = classNames('icon', `icon-${name}`, className, {
+    'icon--rotation': rotation
+  })
+
+  const getStyle = () => {
+    const mergedStyle: React.CSSProperties = { ...style };
+
+    mergedStyle.fontSize = addUnit(size)
+
+    return mergedStyle
+  }
+
+  const handleClick = (e) => {
+    onClick && onClick(e)
+  }
+
   return (
-    <Text className={classNames(['icon', `icon-${name}`, {
-      'icon--rotation': rotation
-    }])} style={{fontSize: addUnit(size)}} onClick={onClick} />
+    <Text className={rootClassName} style={getStyle()} onClick={handleClick} />
   );
 }
 
