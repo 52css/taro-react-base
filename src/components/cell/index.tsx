@@ -5,7 +5,6 @@ import { ICellProps } from './type';
 import './index.scss';
 
 export default function ({
-  className,
   align = 'middle',
   arrow = false,
   bordered = true,
@@ -18,14 +17,27 @@ export default function ({
   rightIcon,
   title,
   url,
+  className,
+  style,
   onClick
 }: ICellProps) {
-  const cellClassName = classNames(
+  const rootClassName = classNames(
     'cell',
     className,
     `cell--${align}`, {
     'cell--bordered': bordered,
   })
+
+  const getStyle = () => {
+    const mergedStyle: React.CSSProperties = { ...style };
+
+    return mergedStyle
+  }
+
+  const handleClick = (e) => {
+    onClick && onClick(e)
+  }
+
   const left = leftIcon || image
   const leftNode = left ? (<View className='cell__left-icon'>{left}</View>) : null
   const descNode = description ? (<View className='cell__description'>
@@ -36,7 +48,7 @@ export default function ({
   if (arrow) right = <Icon name='chevron-right' size='32rpx' />;
   const rightNode = right ? (<View className='cell__right-icon'>{right}</View>) : null;
   return (
-    <View className={cellClassName}>
+    <View className={rootClassName} style={getStyle()} onClick={handleClick}>
       {leftNode}
       <View className='cell__title'>
         {title}

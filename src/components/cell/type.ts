@@ -1,4 +1,5 @@
-import { TNode, TElement, VerticalAlignEnum } from '../common';
+import { MouseEvent } from 'react';
+import { TNode, TElement, VerticalAlignEnum, Styles } from '../common';
 
 export interface ICellProps {
   align?: VerticalAlignEnum;
@@ -13,5 +14,7 @@ export interface ICellProps {
   rightIcon?: TNode;
   title?: string | TNode;
   url?: string;
-  onClick?: (event: MouseEvent) => void;
+  className?: string;
+  style?: Styles;
+  onClick?: (e: MouseEvent<HTMLElement>) => void;
 }
