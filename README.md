@@ -14,6 +14,11 @@
 - [x] 新建custom-tab-bar + images
 - [x] 新建hooks
 
+## 组件通用属性
+- [x] 增加className属性
+- [x] 增加style属性
+- [x] 增加onClick属性
+
 3. [基础组件-icon](./docs/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6-icon.md)
 - [x] 增加字体，如何生成图标字体
 - [x] 增加字体组件
@@ -34,14 +39,12 @@
   - [x] 增加theme属性, 组件风格，依次为品牌色、危险色。可选项：`default`/primary/danger
   - [x] 增加type属性, 按钮类型。可选项：submit/reset/`button`
   - [x] 增加variant属性, 按钮形式，基础、线框、文字。可选项：`base`/outline/text
-  - [x] 增加onClick属性, TS 类型：(e: MouseEvent) => void 点击时触发
 
 5. 基础组件-fab
 - [x] 增加字体组件
   - [x] 增加buttonProps属性, 透传至 Button 组件
   - [x] 增加icon属性，图标。TS 类型：TNode。通用类型定义
   - [x] 增加text属性，文本内容
-  - [x] 增加onClick属性，TS 类型：(context: {e: MouseEvent}) => void悬浮按钮点击事件
 
 6. 数据展示-badge
 - [x] 增加组件
