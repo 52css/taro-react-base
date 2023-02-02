@@ -13,7 +13,10 @@ export default function ({
   offset,
   shape = 'circle',
   showZero = false,
-  size = 'medium'
+  size = 'medium',
+  className,
+  style,
+  onClick
 }: IBadgeProps) {
   const childNode = content || children;
   const getDisplayCount = () => {
@@ -24,18 +27,19 @@ export default function ({
   };
   let isHidden = !count;
 
-  const badgeClassName = classNames(
-    'badge__txt',
-    `badge__txt--${shape}`,
-    `badge__txt--${size}`,
+  const rootClassName = classNames(
+    'badge',
+    className,
+    `badge--${shape}`,
+    `badge--${size}`,
     {
-      'badge__txt--has-children': !!childNode,
-      'badge__txt--dot': dot,
+      'badge--has-children': !!childNode,
+      'badge--dot': dot,
     }
   );
 
   const getStyle = () => {
-    const mergedStyle: React.CSSProperties = {  };
+    const mergedStyle: React.CSSProperties = { ...style };
     if (color) mergedStyle.backgroundColor = color;
     if (offset) {
       if (offset[0]) {
@@ -52,18 +56,18 @@ export default function ({
     isHidden = count < 1 && !showZero;
   }
 
-  console.log('!isHidden', !isHidden)
-
   const badge = !isHidden ? (
-      <Text className={badgeClassName} style={getStyle()}>
+      <Text className='badge__txt'>
         {dot ? null : getDisplayCount()}
       </Text>
     ) : null;
 
-  if (!childNode) return badge;
+  const handleClick = (e) => {
+    onClick && onClick(e)
+  }
 
   return (
-    <View className='badge'>
+    <View className={rootClassName} style={getStyle()} onClick={handleClick}>
       {childNode}
       {badge}
     </View>
