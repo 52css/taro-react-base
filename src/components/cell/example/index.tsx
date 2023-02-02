@@ -6,7 +6,7 @@ import './index.scss'
 export default function() {
   return (
     <View className='example'>
-      <Cell title='单行标题' />
+      <Cell title='单行标题' className='test123' />
       <Cell title='单行标题' required hover url='react-mobile/components/getting-started' />
       <Cell title='单行标题' note='辅助信息' />
       <Cell title='单行标题' arrow />

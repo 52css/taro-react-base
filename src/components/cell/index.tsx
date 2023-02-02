@@ -5,6 +5,7 @@ import { ICellProps } from './type';
 import './index.scss';
 
 export default function ({
+  className,
   align = 'middle',
   arrow = false,
   bordered = true,
@@ -19,7 +20,10 @@ export default function ({
   url,
   onClick
 }: ICellProps) {
-  const cellClassName = classNames('cell', `cell--${align}`, {
+  const cellClassName = classNames(
+    'cell',
+    className,
+    `cell--${align}`, {
     'cell--bordered': bordered,
   })
   const left = leftIcon || image

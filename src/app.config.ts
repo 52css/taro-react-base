@@ -1,11 +1,11 @@
 export default defineAppConfig({
   pages: [
+    'pages/example/index',
     'pages/index/index',
     'pages/about/index',
     'pages/goods/category/index',
     'pages/cart/index',
     'pages/usercenter/my/index',
-    'pages/example/index',
   ],
   subPackages: [
     {
