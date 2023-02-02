@@ -1,5 +1,5 @@
 import { MouseEvent } from 'react';
-import { TNode, TElement, SizeEnum } from '../common';
+import { TNode, TElement, SizeEnum, Styles } from '../common';
 
 export type ButtonShape = `rectangle` | `square` | `round` | `circle`
 // export type ButtonSize = `small` | `medium` | `large`
@@ -9,7 +9,6 @@ export type ButtonVariant = `base` | `outline` | `text`
 
 
 export interface IButtonProps {
-  style?: object;
   block?: boolean;
   children?: TNode;
   content?: TNode;
@@ -22,5 +21,7 @@ export interface IButtonProps {
   theme?: ButtonTheme;
   type?: ButtonType;
   variant?: ButtonVariant;
+  className?: string;
+  style?: Styles;
   onClick?: (e: MouseEvent<HTMLElement>) => void;
 }

@@ -17,28 +17,42 @@ export default function ({
   theme = 'default',
   type = 'button',
   variant = 'base',
+  className,
+  style,
   onClick
 }: IButtonProps) {
-  const childNode = content || children;
+  const rootClassName = classNames([
+    'button',
+    className,
+    `button--${shape}`,
+    `button--${size}`,
+    `button--${theme}`,
+    `button--${variant}`,
+    {
+      'button--block': block,
+      'button--disabled': disabled,
+      'button--ghost': ghost,
+      'button--loading': loading,
+    }
+  ])
+
+  const getStyle = () => {
+    const mergedStyle: React.CSSProperties = { ...style };
+
+    return mergedStyle
+  }
+
   const handleClick = (e) => {
     onClick && onClick(e)
   }
+
+  const childNode = content || children;
+
   return (
     <Button
       formType={type}
-      className={classNames([
-        'button',
-        `button--${shape}`,
-        `button--${size}`,
-        `button--${theme}`,
-        `button--${variant}`,
-        {
-          'button--block': block,
-          'button--disabled': disabled,
-          'button--ghost': ghost,
-          'button--loading': loading,
-        }
-      ])}
+      className={rootClassName}
+      style={getStyle()}
       onClick={handleClick}
     >
       {loading && (<Icon name='loading' rotation />) }
