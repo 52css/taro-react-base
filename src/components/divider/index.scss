@@ -1,0 +1,43 @@
+.divider {
+  align-items: center;
+  border: 0 solid #e7e7e7;
+  color: #0006;
+  display: flex;
+  font-size: 24rpx;
+  margin: 20rpx 0;
+  &::before, &::after {
+    -webkit-box-flex: 1;
+    border-color: inherit;
+    border-style: inherit;
+    border-width: 2rpx 0 0;
+    box-sizing: border-box;
+    display: block;
+    -ms-flex: 1;
+    flex: 1;
+    height: 1rpx;
+  }
+  &::before {
+    content: '';
+  }
+  &--horizontal {
+    &::before, &::after {
+      transform: scaleY(.5);
+    }
+  }
+  &--vertical {
+    border-left: 1rpx solid #e7e7e7;
+    margin: 0 8rpx;
+  }
+  &--dashed {
+    border-style: dashed;
+  }
+  &--has-children {
+    &::before {
+      margin-right: 20rpx;
+    }
+    &::after {
+      content: '';
+      margin-left: 20rpx;
+    }
+  }
+}

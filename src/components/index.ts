@@ -1,6 +1,7 @@
 export { default as Badge } from './badge'
 export { default as Button } from './button'
 export { default as Cell } from './cell'
+export { default as Divider } from './divider'
 export { default as Fab } from './fab'
 export { default as Hello } from './hello'
 export { default as Icon } from './icon'

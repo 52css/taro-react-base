@@ -16,6 +16,7 @@ export default defineAppConfig({
         'fab/example/index',
         'badge/example/index',
         'cell/example/index',
+        'divider/example/index',
       ]
     }
   ],

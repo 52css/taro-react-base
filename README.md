@@ -73,3 +73,12 @@
   - [x] 增加rightIcon属性，最右侧图标。TS 类型：TNode。通用类型定义
   - [x] 增加title属性，标题。TS 类型：string | TNode。通用类型定义
   - [x] 增加url属性，点击后跳转链接地址。如果值为空，则表示不需要跳转
+
+8. 布局-divider
+- [x] 增加组件
+  - [x] 增加align属性, 文本位置（仅在水平分割线有效）。可选项：left/right/`center`
+  - [x] 增加children属性，子元素，同 content。TS 类型：string | TNode。通用类型定义
+  - [x] 增加content属性，子元素。TS 类型：string | TNode。通用类型定义
+  - [x] 增加dashed属性，是否虚线（仅在水平分割线有效）
+  - [x] 增加layout属性，分隔线类型有两种：水平和垂直。可选项：`horizontal`/vertical
+  - [x] 增加lineColor属性，分隔线颜色
