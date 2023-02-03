@@ -10,6 +10,7 @@ function Example() {
       <View>布局</View>
       <Navigator url='/components/cell/example/index'> Cell 宫格 </Navigator>
       <Navigator url='/components/divider/example/index'> Divider 分割符 </Navigator>
+      <Navigator url='/components/grid/example/index'> Grid 宫格 </Navigator>
       <View>导航</View>
       <View>输入</View>
       <View>数据展示</View>

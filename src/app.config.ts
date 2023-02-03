@@ -17,6 +17,7 @@ export default defineAppConfig({
         'badge/example/index',
         'cell/example/index',
         'divider/example/index',
+        'grid/example/index',
       ]
     }
   ],
