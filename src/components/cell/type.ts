@@ -18,3 +18,10 @@ export interface ICellProps {
   style?: Styles;
   onClick?: (e: MouseEvent<HTMLElement>) => void;
 }
+
+export interface ICellGroupProps {
+  children?: TNode;
+  className?: string;
+  style?: Styles;
+  onClick?: (e: MouseEvent<HTMLElement>) => void;
+}
