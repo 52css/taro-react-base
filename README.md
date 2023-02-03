@@ -58,3 +58,18 @@
   - [x] 增加shape属性，形状。可选项：`circle`/round
   - [x] 增加showZero属性，当数值为 0 时，是否展示徽标
   - [x] 增加size属性，尺寸。可选项：small/`medium`
+
+7. 布局-cell
+- [x] 增加组件
+  - [x] 增加align属性, 内容的对齐方式，默认居中对齐。可选项：top/`middle`/bottom
+  - [x] 增加arrow属性，是否显示右侧箭头
+  - [x] 增加bordered属性，是否显示下边框
+  - [x] 增加description属性，下方内容描述。TS 类型：string | TNode。通用类型定义
+  - [x] 增加hover属性，是否开启点击反馈
+  - [x] 增加image属性，主图。TS 类型：string | TNode。通用类型定义
+  - [x] 增加leftIcon属性，左侧图标，出现在单元格标题的左侧。TS 类型：TNode。通用类型定义
+  - [x] 增加note属性，和标题同行的说明文字。TS 类型：string | TNode。通用类型定义
+  - [x] 增加required属性，是否显示表单必填星号
+  - [x] 增加rightIcon属性，最右侧图标。TS 类型：TNode。通用类型定义
+  - [x] 增加title属性，标题。TS 类型：string | TNode。通用类型定义
+  - [x] 增加url属性，点击后跳转链接地址。如果值为空，则表示不需要跳转
