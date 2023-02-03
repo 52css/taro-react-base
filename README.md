@@ -15,18 +15,19 @@
 - [x] 新建hooks
 
 ## 组件通用属性
-- [x] 增加className属性
-- [x] 增加style属性
-- [x] 增加onClick属性
+- [x] Props
+  - [x] 增加className属性
+  - [x] 增加style属性
+  - [x] 增加onClick属性
 
 3. [基础组件-icon](./docs/%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6-icon.md)
 - [x] 增加字体，如何生成图标字体
-- [x] 增加字体组件
+- [x] Props
   - [x] 增加name属性
   - [x] 增加size属性
 
 4. 基础组件-button
-- [x] 增加字体组件
+- [x] Props
   - [x] 增加block属性, 是否是块状
   - [x] 增加children属性，按钮内容，同 content。TS 类型：string | TNode。通用类型定义
   - [x] 增加content属性，按钮内容。TS 类型：string | TNode。通用类型定义
@@ -41,13 +42,13 @@
   - [x] 增加variant属性, 按钮形式，基础、线框、文字。可选项：`base`/outline/text
 
 5. 基础组件-fab
-- [x] 增加字体组件
+- [x] Props
   - [x] 增加buttonProps属性, 透传至 Button 组件
   - [x] 增加icon属性，图标。TS 类型：TNode。通用类型定义
   - [x] 增加text属性，文本内容
 
 6. 数据展示-badge
-- [x] 增加组件
+- [x] Props
   - [x] 增加children属性, 徽标内容，同 content。TS 类型：string | TNode。通用类型定义
   - [x] 增加color属性，颜色
   - [x] 增加content属性，徽标内容。TS 类型：string | TNode。通用类型定义
@@ -60,7 +61,7 @@
   - [x] 增加size属性，尺寸。可选项：small/`medium`
 
 7. 布局-cell
-- [x] 增加组件
+- [x] Props
   - [x] 增加align属性, 内容的对齐方式，默认居中对齐。可选项：top/`middle`/bottom
   - [x] 增加arrow属性，是否显示右侧箭头
   - [x] 增加bordered属性，是否显示下边框
@@ -75,10 +76,23 @@
   - [x] 增加url属性，点击后跳转链接地址。如果值为空，则表示不需要跳转
 
 8. 布局-divider
-- [x] 增加组件
+- [x] Props
   - [x] 增加align属性, 文本位置（仅在水平分割线有效）。可选项：left/right/`center`
   - [x] 增加children属性，子元素，同 content。TS 类型：string | TNode。通用类型定义
   - [x] 增加content属性，子元素。TS 类型：string | TNode。通用类型定义
   - [x] 增加dashed属性，是否虚线（仅在水平分割线有效）
   - [x] 增加layout属性，分隔线类型有两种：水平和垂直。可选项：`horizontal`/vertical
   - [x] 增加lineColor属性，分隔线颜色
+
+9. 布局-grid
+- [x] Grid Props
+  - [x] 增加align属性, 内容对齐方式。可选项：left/`center`
+  - [x] 增加border属性，边框，默认不显示。值为 true 则显示默认边框，值类型为 object 则表示自定义边框样式。TS 类型：boolean | { color?: string; width?: string; style?: 'solid' | 'dashed' | 'dotted' | 'double' | 'groove' | 'inset' | 'outset' }
+  - [x] 增加column属性，每一行的列数量, 默认4
+  - [x] 增加gutter属性，间隔大小
+- [x] GridItem Props
+  - [x] 增加badgeProps属性, 头像右上角提示信息，继承 Badge 组件的全部特性。如：小红点，或者数字。TS 类型：BadgeProps，Badge API Documents。详细类型定义
+  - [x] 增加description属性，文本以外的更多描述，辅助信息。可以通过 Props 传入文本，也可以自定义标题节点。TS 类型：string | TNode。通用类型定义
+  - [x] 增加image属性，图片，可以是图片地址，也可以自定义图片节点。TS 类型：string | TNode。通用类型定义
+  - [x] 增加layout属性，内容布局方式。可选项：`vertical`/horizontal
+  - [x] 增加text属性，文本，可以通过 Props 传入文本，也可以自定义标题节点。TS 类型：string | TNode。通用类型定义
