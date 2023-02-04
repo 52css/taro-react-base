@@ -28,4 +28,5 @@ export interface IGridItemProps {
   image?: string | TNode;
   layout?: 'vertical' | 'horizontal';
   text?: string | TNode;
+  parentColumn?: number;
 }
