@@ -96,3 +96,23 @@
   - [x] 增加image属性，图片，可以是图片地址，也可以自定义图片节点。TS 类型：string | TNode。通用类型定义
   - [x] 增加layout属性，内容布局方式。可选项：`vertical`/horizontal
   - [x] 增加text属性，文本，可以通过 Props 传入文本，也可以自定义标题节点。TS 类型：string | TNode。通用类型定义
+
+10. 步骤条-steps
+- [x] Steps Props
+  - [ ] 增加current属性, 当前步骤，即整个步骤条进度。默认根据步骤下标判断步骤的完成状态，当前步骤为进行中，当前步骤之前的步骤为已完成，当前步骤之后的步骤为未开始。如果每个步骤没有设置 value，current 值为步骤长度则表示所有步骤已完成。如果每个步骤设置了自定义 value，则 current = 'FINISH' 表示所有状态完成
+  - [ ] 增加defaultCurrent属性，当前步骤，即整个步骤条进度。默认根据步骤下标判断步骤的完成状态，当前步骤为进行中，当前步骤之前的步骤为已完成，当前步骤之后的步骤为未开始。如果每个步骤没有设置 value，current 值为步骤长度则表示所有步骤已完成。如果每个步骤设置了自定义 value，则 current = 'FINISH' 表示所有状态完成。非受控属性
+  - [ ] 增加layout属性，步骤条方向，有两种：横向和纵向。可选项：`horizontal`/vertical
+  - [ ] 增加options属性，步骤条数据列表（作用和 StepItem 效果一样）。TS 类型：Array<TdStepItemProps>
+  - [ ] 增加readonly属性，只读状态
+  - [ ] 增加separator属性，步骤条分割符。可选项：`line`/dashed/arrow
+  - [ ] 增加theme属性，步骤条风格。可选项：`default`/dot
+  - [ ] 增加onChange属性，TS 类型：(current: string | number, previous: string | number, context?: { e?: MouseEvent }) => void 当前步骤发生变化时触发
+- [x] StepItem Props
+  - [ ] 增加badgeProps属性, 头像右上角提示信息，继承 Badge 组件的全部特性。如：小红点，或者数字。TS 类型：BadgeProps，Badge API Documents。详细类型定义
+  - [ ] 增加description属性，文本以外的更多描述，辅助信息。可以通过 Props 传入文本，也可以自定义标题节点。TS 类型：string | TNode。通用类型定义
+  - [ ] 增加children属性，步骤描述，同 content。TS 类型：string | TNode。通用类型定义
+  - [ ] 增加content属性，步骤描述。TS 类型：string | TNode。通用类型定义
+  - [ ] 增加layout属性，内容布局方式。可选项：`vertical`/horizontal
+  - [ ] 增加icon属性，图标，默认显示内置图标，也可以自定义图标，值为 false 则不显示图标。优先级大于 status 定义的图标。TS 类型：boolean | TNode。通用类型定义
+  - [ ] 增加status属性，当前步骤的状态。可选项：default/process/finish/error。TS 类型：StepStatus type StepStatus = 'default' | 'process' | 'finish' | 'error'。详细类型定义
+  - [ ] 增加title属性，标题。TS 类型：string | TNode。通用类型定义
